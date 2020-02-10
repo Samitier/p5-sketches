@@ -1,17 +1,15 @@
 <template>
   <MainLayout>
-    <router-view />
+    Hello World
   </MainLayout>
 </template>
 
 <script lang="ts">
-import { createComponent } from "@vue/composition-api"
 import MainLayout from "./components/MainLayout.vue"
 
-export default createComponent({
-  name: "App",
+export default {
   components: { MainLayout }
-})
+}
 </script>
 
 <style lang="stylus">

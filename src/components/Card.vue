@@ -5,11 +5,7 @@
 </template>
 
 <script lang="ts">
-import { createComponent } from "@vue/composition-api"
-
-export default createComponent({
-  name: "MainLayout"
-})
+export default {}
 </script>
 
 <style scoped lang="stylus"></style>
