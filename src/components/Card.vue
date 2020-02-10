@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    home
+  <div class="mainLayout">
+    <slot />
   </div>
 </template>
 
@@ -8,6 +8,8 @@
 import { createComponent } from "@vue/composition-api"
 
 export default createComponent({
-  name: "home"
+  name: "MainLayout"
 })
 </script>
+
+<style scoped lang="stylus"></style>
