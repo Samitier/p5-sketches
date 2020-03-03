@@ -9,7 +9,6 @@ export default {}
 </script>
 
 <style scoped lang="stylus">
-
 .mainLayout
   fixed-fullscreen()
   background beige_2

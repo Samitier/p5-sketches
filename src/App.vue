@@ -1,6 +1,6 @@
 <template>
   <MainLayout>
-    Hello World
+    <router-view />
   </MainLayout>
 </template>
 
