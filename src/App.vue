@@ -1,14 +1,37 @@
 <template>
-  <MainLayout>
-    <router-view />
-  </MainLayout>
+  <router-view />
 </template>
 
 <script lang="ts">
-import MainLayout from "./components/MainLayout.vue"
+import { defineComponent, watch } from "vue"
+import { useRoute } from "vue-router"
 
-export default {
-  components: { MainLayout }
+export default defineComponent({
+  setup(props, b) {
+    useSeoMetas()
+  }
+})
+
+function useSeoMetas() {
+  const route = useRoute()
+
+  watch(
+    () => route.value,
+    route => {
+      document.title = route.name + " - My vue App"
+      addMetaTag("description", route.meta.description)
+      addMetaTag("robots", route.meta.robots)
+    }
+  )
+
+  function addMetaTag(name: string, value: string) {
+    document.querySelector(`meta[name=${name}]`)?.remove()
+    if (!value) return
+    const meta = document.createElement("meta")
+    meta.name = name
+    meta.content = value
+    document.getElementsByTagName("head")[0].appendChild(meta)
+  }
 }
 </script>
 
