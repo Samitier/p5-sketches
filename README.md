@@ -1,4 +1,4 @@
-# soundbox
+# p5-sketches
 
 ## Project setup
 ```

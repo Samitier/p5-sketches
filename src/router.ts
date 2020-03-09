@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router"
-import SketchList from "./pages/SketchList.vue"
-import SketchDetail from "./pages/SketchDetail.vue"
-import NotFound from "./pages/404.vue"
-import sketches from "./sketches"
+import SketchList from "@/pages/SketchList.vue"
+import SketchDetail from "@/pages/SketchDetail/SketchDetail.vue"
+import NotFound from "@/pages/404.vue"
+import sketches from "@/assets/sketches"
 
 export default createRouter({
   history: createWebHistory(),
@@ -30,7 +30,7 @@ export default createRouter({
       name: "404 Not found",
       meta: {
         description: "The page cannot be found",
-        robots: "noindex"
+        robots: "none"
       }
     }
   ]
