@@ -16,7 +16,7 @@ export default createRouter({
       }
     },
     ...sketches.map(s => ({
-      path: "/" + s.name.toLowerCase().replace(/ /g, "-"),
+      path: "/" + s.sketch,
       component: SketchDetail,
       name: s.name,
       meta: {
