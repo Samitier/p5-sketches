@@ -32,6 +32,6 @@ function useP5Sketch() {
 
 <style lang="stylus" scoped>
 .canvas
-  z-index -1
+  z-index 0
   fixed-fullscreen()
 </style>

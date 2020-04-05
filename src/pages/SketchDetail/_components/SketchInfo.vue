@@ -35,11 +35,11 @@ function useSketchInfo() {
 .info
   fixed-fullscreen()
   align-middle()
+  z-index 1
   padding 3rem
   color white
   max-width 30rem
   background #222
-  animation aaa 4s forwards
 .title
   font-size 6rem
   line-height .85
