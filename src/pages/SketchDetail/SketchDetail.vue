@@ -1,8 +1,8 @@
 <template>
-  <div :class="isOpen && 'open'">
+  <div :class="isClosed && 'closed'">
     <SketchInfo />
-    <SketchRenderer @click="isOpen = true" />
-    <a class="samitier" @click="isOpen = false">
+    <SketchRenderer @click="isClosed = true" />
+    <a class="samitier" @click="onOpen">
       サミティエ
     </a>
   </div>
@@ -16,9 +16,16 @@ import SketchRenderer from "./_components/SketchRenderer.vue"
 export default defineComponent({
   components: { SketchInfo, SketchRenderer },
   setup() {
-    const isOpen = ref(false)
-    onMounted(() => setTimeout(() => (isOpen.value = true), 2500))
-    return { isOpen }
+    const isClosed = ref(false)
+    const closeAfterTimeout = () => setTimeout(() => (isClosed.value = true), 2500)
+    onMounted(closeAfterTimeout)
+    let timeout = 0
+    const onOpen = () => {
+      isClosed.value = false
+      if (timeout) clearTimeout(timeout)
+      timeout = closeAfterTimeout()
+    }
+    return { isClosed, onOpen }
   }
 })
 </script>
@@ -33,7 +40,7 @@ animTime = .5s
   filter blur(5px)
   opactity 0.5
   transition filter animTime, opacity animTime
-.open
+.closed
   .info
     transform translate(-30rem)
   .canvas
