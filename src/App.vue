@@ -18,7 +18,7 @@ function useSeoMetas() {
   watch(
     () => route.value,
     route => {
-      document.title = route.name + " - My vue App"
+      document.title = route.name + " - Blai Samitier"
       addMetaTag("description", route.meta.description)
       addMetaTag("robots", route.meta.robots)
     }

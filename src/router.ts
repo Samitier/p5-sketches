@@ -10,7 +10,7 @@ export default createRouter({
     {
       path: "/",
       component: SketchList,
-      name: "My vue app",
+      name: "P5 Sketches - Blai Samitier",
       meta: {
         description: "A description"
       }
