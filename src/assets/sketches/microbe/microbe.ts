@@ -1,7 +1,7 @@
 import P5 from "p5"
 import MicrobePart from "./microbe-part"
 
-export default function Snakes(p: P5) {
+export default function(p: P5) {
   const parts: MicrobePart[] = []
 
   p.setup = () => {

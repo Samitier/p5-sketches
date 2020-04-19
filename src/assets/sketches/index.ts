@@ -21,5 +21,11 @@ export default [
     description: "Some wavy lines on top of each other with some color degradation",
     date: "2020-04-17",
     sketch: "wavy-lines"
+  },
+  {
+    name: "Skyline",
+    description: "An outrun skyline to practise with clipping & layering.",
+    date: "2020-04-19",
+    sketch: "skyline"
   }
 ]

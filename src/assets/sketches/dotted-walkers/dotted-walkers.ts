@@ -1,7 +1,7 @@
 import P5 from "p5"
 import Walker from "./walker"
 
-export default function Walkers(p: P5) {
+export default function(p: P5) {
   const walkers: Walker[] = []
   for (let i = 0; i < 100; ++i) walkers.push(new Walker())
 
