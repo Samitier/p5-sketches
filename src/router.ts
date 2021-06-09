@@ -1,22 +1,22 @@
-import { createRouter, createWebHistory } from "vue-router"
-import SketchList from "@/pages/SketchList.vue"
-import SketchDetail from "@/pages/SketchDetail/SketchDetail.vue"
-import NotFound from "@/pages/404.vue"
-import sketches from "@/assets/sketches"
+import SketchList from './pages/SketchList.vue'
+import NotFound from './pages/404.vue'
+import SketchDetail from './pages/SketchDetail/SketchDetail.vue'
+import sketches from './sketches'
+import { createRouter, createWebHistory } from 'vue-router'
 
-export default createRouter({
+export const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/",
+      path: '/',
       component: SketchList,
-      name: "P5 Sketches - Blai Samitier",
+      name: 'P5 Sketches - Blai Samitier',
       meta: {
-        description: "A description"
+        description: 'A description'
       }
     },
-    ...sketches.map(s => ({
-      path: "/" + s.sketch,
+    ...sketches.map((s) => ({
+      path: '/' + s.sketch,
       component: SketchDetail,
       name: s.name,
       meta: {
@@ -25,12 +25,12 @@ export default createRouter({
       }
     })),
     {
-      path: "/:catchAll(.*)",
+      path: '/:pathMatch(.*)',
       component: NotFound,
-      name: "404 Not found",
+      name: '404 Not found',
       meta: {
-        description: "The page cannot be found",
-        robots: "none"
+        description: 'The page cannot be found',
+        robots: 'none'
       }
     }
   ]

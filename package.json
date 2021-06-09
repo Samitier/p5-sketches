@@ -1,86 +1,22 @@
 {
-  "name": "p5-sketches",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.0",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
   },
   "dependencies": {
-    "core-js": "^3.6.2",
     "p5": "^0.9.0",
-    "register-service-worker": "^1.6.2",
-    "vue": "^3.0.0-alpha.11",
-    "vue-router": "4.0.0-alpha.1"
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.8"
   },
   "devDependencies": {
     "@types/p5": "^0.9.0",
-    "@vue/cli-plugin-babel": "^4.3.0",
-    "@vue/cli-plugin-eslint": "^4.3.0",
-    "@vue/cli-plugin-pwa": "^4.3.0",
-    "@vue/cli-plugin-typescript": "^4.3.0",
-    "@vue/cli-service": "^4.3.0",
-    "@vue/compiler-sfc": "^3.0.0-alpha.11",
-    "@vue/eslint-config-prettier": "^5.0.0",
-    "@vue/eslint-config-typescript": "^4.0.0",
-    "eslint": "^5.16.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-vue": "^5.0.0",
-    "lint-staged": "^9.4.2",
-    "prettier": "^1.18.2",
-    "stylus": "^0.54.7",
-    "stylus-loader": "^3.0.2",
-    "typescript": "^3.5.0",
-    "vue-cli-plugin-vue-next": "0.0.5"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/prettier",
-      "@vue/typescript"
-    ],
-    "rules": {
-      "semi": [
-        2,
-        "never"
-      ],
-      "no-console": "warn"
-    },
-    "parserOptions": {
-      "parser": "@typescript-eslint/parser"
-    }
-  },
-  "prettier": {
-    "arrowParens": "avoid",
-    "braketSpacing": true,
-    "printWidth": 90,
-    "trailingComma": "none",
-    "tabWidth": 2,
-    "semi": false,
-    "singleQuote": false,
-    "vueIndentScriptAndStyle": false
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,vue,ts}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "prettier": "^2.3.1",
+    "typescript": "^4.1.3",
+    "vite": "^2.3.5",
+    "vue-tsc": "^0.0.24"
   }
 }

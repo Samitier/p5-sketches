@@ -2,45 +2,43 @@
   <router-view />
 </template>
 
-<script lang="ts">
-import { defineComponent, watch } from "vue"
-import { useRoute } from "vue-router"
+<style>
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
 
-export default defineComponent({
-  setup(props, b) {
-    useSeoMetas()
-  }
-})
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-function useSeoMetas() {
-  const route = useRoute()
+@font-face {
+  font-family: 'Kollektif';
+  src: URL('/fonts/kollektif/kollektif-bold.ttf') format('truetype');
+}
 
-  watch(
-    () => route.value,
-    route => {
-      document.title = route.name + " - Blai Samitier"
-      addMetaTag("description", route.meta.description)
-      addMetaTag("robots", route.meta.robots)
-    }
-  )
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Kollektif';
+}
 
-  function addMetaTag(name: string, value: string) {
-    document.querySelector(`meta[name=${name}]`)?.remove()
-    if (!value) return
-    const meta = document.createElement("meta")
-    meta.name = name
-    meta.content = value
-    document.getElementsByTagName("head")[0].appendChild(meta)
+body {
+  font-family: 'Libre Baskerville', serif;
+}
+
+@media (max-width: 600px) {
+  html,
+  body {
+    font-size: 13px;
   }
 }
-</script>
-
-<style lang="stylus">
-html, body
-  height 100%
-  width 100%
-  margin 0
-  overflow hidden
-*
-  box-sizing border-box
 </style>

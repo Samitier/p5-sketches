@@ -24,8 +24,14 @@ export default [
   },
   {
     name: "Skyline",
-    description: "An outrun skyline to practise with clipping & layering.",
+    description: "An outrun skyline to practise with clipping & layering",
     date: "2020-04-19",
     sketch: "skyline"
+  },
+  {
+    name: "Tears",
+    description: "A sad statue that emits interactive cubic tears. Model by Stalomir",
+    date: "2020-04-25",
+    sketch: "tears"
   }
 ]
