@@ -1,7 +1,7 @@
 import SketchList from './pages/SketchList.vue'
 import NotFound from './pages/404.vue'
 import SketchDetail from './pages/SketchDetail/SketchDetail.vue'
-import sketches from './sketches'
+import { sketches } from './sketches'
 import { createRouter, createWebHistory } from 'vue-router'
 
 export const router = createRouter({
@@ -15,7 +15,7 @@ export const router = createRouter({
         description: 'A description'
       }
     },
-    ...sketches.map((s) => ({
+    ...sketches.map(s => ({
       path: '/' + s.sketch,
       component: SketchDetail,
       name: s.name,

@@ -13,7 +13,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useRoute } from 'vue-router'
-import sketches from '../../../sketches'
+import { sketches } from '../../../sketches'
 
 const baseSrc =
   'https://github.com/Samitier/p5-sketches/blob/master/src/assets/sketches/'
