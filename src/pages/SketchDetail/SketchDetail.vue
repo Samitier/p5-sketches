@@ -2,7 +2,7 @@
   <div :class="isClosed && 'closed'">
     <SketchInfo />
     <SketchRenderer @click="isClosed = true" />
-    <a class="samitier" @click="onOpen"> サミティエ </a>
+    <a class="samitier" @click="onOpen"> samitier </a>
   </div>
 </template>
 
@@ -53,7 +53,7 @@ export default defineComponent({
   top: -2rem;
   left: -6.5rem;
   font-size: 0.9rem;
-  padding: 4rem 5rem 0.5rem 5rem;
+  padding: 5rem 3rem 0.6rem 5.3rem;
   color: white;
   transition: box-shadow 0.5s;
   cursor: pointer;
