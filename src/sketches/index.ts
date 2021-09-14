@@ -31,5 +31,10 @@ export const sketches = [
     description:
       'A sad statue that emits interactive cubic tears. Model by Stalomir',
     sketch: 'tears'
+  },
+  {
+    name: 'Dotted Face',
+    description: 'A face made by tiny colored dots',
+    sketch: 'dotted-face'
   }
 ]
